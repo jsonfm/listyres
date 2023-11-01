@@ -1,5 +1,6 @@
 import { RestaurantCard } from "../components/Restaurant/Card";
 import { Icon } from "@iconify/react";
+import data from "../data/data.json";
 
 const Home = () => {
     return (
@@ -9,31 +10,13 @@ const Home = () => {
                     <Icon icon="ep:arrow-up-bold" />
                 </div>
             </div>
-            <section className="h-screen bg-rose-600">
-                <div className="container flex flex-col items-center justify-center h-full">
-                    <RestaurantCard />
-                </div>
-            </section>
-            <section className="h-screen bg-zinc-800">
-                <div className="container flex flex-col items-center justify-center h-full">
-                    <RestaurantCard />
-                </div>
-            </section>
-            <section className="h-screen bg-lime-600">
-                <div className="container flex flex-col items-center justify-center h-full">
-                    <RestaurantCard />
-                </div>
-            </section>
-            <section className="h-screen bg-zinc-800">
-                <div className="container flex flex-col items-center justify-center h-full">
-                    <RestaurantCard />
-                </div>
-            </section>
-            <section className="h-screen bg-orange-600">
-                <div className="container flex flex-col items-center justify-center h-full">
-                    <RestaurantCard />
-                </div>
-            </section>
+            {data?.map((restaurant) => (
+                <section className="h-screen bg-zinc-800">
+                    <div className="container flex flex-col items-center justify-center h-full">
+                        <RestaurantCard restaurant={restaurant} />
+                    </div>
+                </section>
+            ))}
         </>
     );
 };
