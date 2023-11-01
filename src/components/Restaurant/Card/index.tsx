@@ -1,9 +1,8 @@
-import React from "react";
 import { Icon } from "@iconify/react";
 
-interface RestaurantCardProps {
-    restaurant?: unknown;
-}
+// interface RestaurantCardProps {
+//     restaurant?: unknown;
+// }
 
 export const RestaurantCard = () => {
     return (
