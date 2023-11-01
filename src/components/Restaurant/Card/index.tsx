@@ -12,9 +12,10 @@ export const RestaurantCard = () => {
                 <p className="text-justify">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, doloremque ...
                 </p>
-                <div className="flex items-end gap-2 my-5">
-                    <Icon icon="carbon:location-filled" fontSize={30} />
+                <div className="flex items-center gap-2 my-5 hover:scale-105 duration-200 cursor-pointer">
+                    <Icon icon="carbon:location-filled" fontSize={20} />
                     <p className="font-bold">Av. de los paltas</p>
+                    <Icon icon="mingcute:arrow-right-fill" className="animate-bounce" />
                 </div>
             </div>
             <div className="h-64 w-full flex  gap-4 overflow-x-scroll overscroll-x-auto py-2">
